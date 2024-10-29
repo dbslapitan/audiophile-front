@@ -31,7 +31,8 @@ body{
         margin: auto;
 
         @include tablet{
-            width: 43.0625rem;
+            width: 90%;
+            max-width: 69.375rem;
         }
     }
 }

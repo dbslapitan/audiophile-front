@@ -18,10 +18,9 @@
         padding: 2rem 0;
 
         @include mid-mobile{
-            width: 43.0625rem;
             border-bottom: 1px solid #FFFFFF1A;
             margin: auto;
-            padding: 2rem 40px;
+            padding: 2rem 0;
         }
 
         @include mid-tablet{

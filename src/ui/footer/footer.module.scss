@@ -27,6 +27,12 @@
             align-items: flex-end;
             justify-content: space-between;
         }
+
+        @include mid-tablet{
+            padding-left: 0;
+            padding-right: 0;
+            padding: 4.4375rem 0 3rem;
+        }
     }
 
     &__logo{
