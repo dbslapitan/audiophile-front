@@ -1,6 +1,17 @@
+@mixin mid-mobile{
+    @media screen and (min-width: 689px) {
+        @content;
+    }
+}
 
 @mixin tablet{
     @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mid-tablet{
+    @media screen and (min-width: 1234px) {
         @content;
     }
 }
@@ -63,7 +74,7 @@
 @mixin subtitle{
     font-size: 0.8125rem;
     font-weight: 700;
-    line-height: 1.92388;
+    line-height: 1.92308;
     letter-spacing: 0.929px;
 }
 
@@ -81,7 +92,7 @@
 }
 
 @mixin body_03{
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;

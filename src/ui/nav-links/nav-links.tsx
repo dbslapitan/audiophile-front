@@ -45,11 +45,14 @@ export default function NavLinks() {
 
     return (
         <nav className={`${styles["nav"]}`} >
-            <button onClick={toggleHandler}>
+            <button className={`${styles["nav__toggle"]}`} onClick={toggleHandler}>
                 <Image src={hamburger} alt="hamburger icon" height={15} width={16} />
             </button>
             <ul className={`${styles["nav__links"]} ${isOpen ? styles["nav__links--show"] : ""}`}>
-                <li className={`${styles["nav__item"]}`}>
+                <li className={`${styles["nav__item"]} ${styles["nav__item--home"]}`}>
+                    <Link href={"/"} className={`${styles["nav__link"]}`}>HOME</Link>
+                </li>
+                <li className={`${styles["nav__item"]} ${styles["nav__item--first"]}`}>
                     <Link href={"/headphones"} className={`content ${styles["nav__link"]}`}>
                         <Image src={headphones} alt="thumbnail for headphones category" className={`${styles["nav__image"]}`} height={104}/>
                         HEADPHONES

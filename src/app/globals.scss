@@ -17,8 +17,13 @@ body{
 }
 
 .content{
-    width: 20.4375rem;
+    width: 87.2%;
     margin: auto;
+
+    @include tablet{
+        width: 90%;
+        max-width: 69.375rem;
+    }
 }
 
 button{

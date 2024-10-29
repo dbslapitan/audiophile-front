@@ -2,15 +2,37 @@
 @use "../../styles/variables" as *;
 
 .header{
-    background-color: $black-01;
+    background-color: $black-02;
     position: relative;
+    border-bottom: 1px solid #FFFFFF1A;
+
+    @include mid-mobile{
+        border-bottom: none;
+    }
 
     &__content{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2rem 1.5rem;
-        border-bottom: 1px solid #FFFFFF1A;
         align-items: center;
+        padding: 2rem 0;
+
+        @include mid-mobile{
+            width: 43.0625rem;
+            border-bottom: 1px solid #FFFFFF1A;
+            margin: auto;
+            padding: 2rem 40px;
+        }
+
+        @include mid-tablet{
+            padding: 2.1875rem 0 2.3125rem;
+        }
+    }
+
+    &__cart{
+
+        @include mid-tablet{
+            order: 2;
+        }
     }
 }

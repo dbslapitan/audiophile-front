@@ -3,6 +3,10 @@
 
 .nav{
 
+    @include mid-tablet{
+        order: 1;
+    }
+
     &__links{
         position: absolute;
         top: 100%;
@@ -15,19 +19,57 @@
         &--show{
             display: unset;
         }
+
+        @include mid-tablet{
+            display: flex;
+            position: static;
+            height: fit-content;
+            width: fit-content;
+            background-color: inherit;
+            column-gap: 2.125rem;
+        }
+    }
+
+    &__toggle{
+
+        @include mid-tablet{
+            display: none;
+        }
     }
 
     &__item{
         background-color: $white-00;
         padding-top: 4.25rem;
 
-        &:first-of-type{
+        &--first{
             padding-top: 5.25rem;
+
+            @include mid-tablet{
+                padding: 0;
+            }
         }
 
         &:last-of-type{
             padding-bottom: 2.1875rem;
             border-radius: 0 0 0.5rem 0.5rem;
+
+            @include mid-tablet{
+                padding: 0;
+                border-radius: 0;
+            }
+        }
+
+        @include mid-tablet{
+            padding: 0;
+            background-color: inherit;
+        }
+
+        &--home{
+            display: none;
+
+            @include mid-tablet{
+                display: block;
+            }
         }
     }
 
@@ -41,11 +83,26 @@
         border-radius: 0.5rem;
         background-color: $white-02;
         position: relative;
+        width: 20.4375rem;
+
+        @include mid-tablet{
+            @include subtitle;
+            letter-spacing: 2px;
+            padding: 0;
+            width: fit-content;
+            background-color: inherit;
+            border-radius: 0;
+            color: $white-00;
+        }
     }
 
     &__image{
         position: absolute;
         top: -3.25rem;
+
+        @include mid-tablet{
+            display: none;
+        }
     }
 
     &__shop{
@@ -56,6 +113,10 @@
         &::after{
             content: url("../../../public/icons/icon-arrow-right.svg");
             margin-left: 0.75rem;
+        }
+
+        @include mid-tablet{
+            display: none;
         }
     }
 }
