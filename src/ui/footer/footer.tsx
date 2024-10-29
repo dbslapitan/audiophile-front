@@ -41,17 +41,17 @@ export default function Footer() {
                 <p className={`${styles["footer__description"]}`}>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
                 <p className={`${styles["footer__description"]}`}>Copyright 2021. All Rights Reserved</p>
                 <ul className={`${styles["socials"]}`}>
-                    <li className={`${styles["socials__item"]}`}>
+                    <li>
                         <a href={"https://www.facebook.com"} target="_blank">
                             <Image src={facebook} alt="facebook logo" height={24} width={24} />
                         </a>
                     </li>
-                    <li className={`${styles["socials__item"]}`}>
+                    <li>
                         <a href={"https://www.twitter.com"} target="_blank">
                             <Image src={twitter} alt="twitter logo" height={20} width={24} />
                         </a>
                     </li>
-                    <li className={`${styles["socials__item"]}`}>
+                    <li>
                         <a href={"https://www.instagram.com"} target="_blank">
                             <Image src={instagram} alt="instagram logo" height={24} width={24} />
                         </a>
