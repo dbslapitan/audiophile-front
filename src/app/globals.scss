@@ -14,6 +14,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: inherit;
+    color: inherit;
 }
 
 .content{
@@ -23,6 +24,11 @@ body{
     @include tablet{
         width: 90%;
         max-width: 69.375rem;
+    }
+
+    &--fix{
+        width: 20.4375rem;
+        margin: auto;
     }
 }
 
@@ -34,6 +40,8 @@ button{
 a{
     text-decoration: none;
     font-size: 0;
+    display: block;
+    width: fit-content;
 }
 
 ul{

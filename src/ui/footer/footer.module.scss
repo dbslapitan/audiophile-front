@@ -1,0 +1,50 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.footer{
+    background-color: $black-01;
+
+    &__block{
+        width: 6.3125rem;
+        height: 0.25rem;
+        background-color: $peach-00;
+        margin: auto;
+    }
+
+    &__content{
+        padding: 3rem 0 2.375rem;
+        color: $white-00;
+    }
+
+    &__logo{
+        margin: auto;
+    }
+
+    &__links{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    &__link{
+        @include subtitle;
+        letter-spacing: 2px;
+        margin: auto;
+    }
+
+    &__description{
+        @include body-01;
+        text-align: center;
+        opacity: 0.5;
+        margin-top: 3rem;
+    }
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-top: 3rem;
+    align-items: center;
+}
