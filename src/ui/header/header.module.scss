@@ -1,0 +1,6 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.header{
+    background-color: $black-01;
+}

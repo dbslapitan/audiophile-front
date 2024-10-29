@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { manrope } from "@/libs/fonts";
+import Header from "@/ui/header/header";
 
 export const metadata: Metadata = {
   title: "Audiophile | Home",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
+        <Header />
         {children}
       </body>
     </html>
