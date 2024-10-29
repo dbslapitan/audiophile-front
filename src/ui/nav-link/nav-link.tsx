@@ -18,17 +18,19 @@ export default function NavLinks() {
                 <li className={`${styles["nav__item"]}`}>
                     <Link href={"/headphones"}>
                         {/* <Image src={headphones} alt="thumbnail for headphones category" /> */}
+                        Headphones
                     </Link>
                 </li>
                 <li className={`${styles["nav__item"]}`}>
                     <Link href={"/speakers"}>
                         {/* <Image src={speakers} alt="thumbnail for speakers category" /> */}
-                        Headphones
+                        Speakers
                     </Link>
                 </li>
                 <li className={`${styles["nav__item"]}`}>
                     <Link href={"/earphones"}>
                     {/* <Image src={earphones} alt="thumbnail for earphones category" /> */}
+                    Earphones
                     </Link>
                 </li>
             </ul>
