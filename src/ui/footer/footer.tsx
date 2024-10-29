@@ -9,7 +9,9 @@ import instagram from "../../../public/icons/icon-instagram.svg";
 export default function Footer() {
     return (
         <footer className={`${styles["footer"]}`}>
-            <div className={`${styles["footer__block"]}`}></div>
+            <div className={`content--fix`}>
+                <span className={`${styles["footer__block"]}`}></span>
+            </div>
             <nav className={`content--fix ${styles["footer__content"]}`}>
                 <Link href={`/`} className={`${styles["footer__logo"]}`}>
                     <Image src={logo} alt="site logo" height={25} width={143} />

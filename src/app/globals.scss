@@ -29,6 +29,10 @@ body{
     &--fix{
         width: 20.4375rem;
         margin: auto;
+
+        @include tablet{
+            width: 43.0625rem;
+        }
     }
 }
 
