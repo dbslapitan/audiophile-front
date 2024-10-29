@@ -3,4 +3,13 @@
 
 .header{
     background-color: $black-01;
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1.5rem;
+        border-bottom: 1px solid #FFFFFF1A;
+        align-items: center;
+    }
 }

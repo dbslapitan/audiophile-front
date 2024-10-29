@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   sassOptions: {
-    silenceDeprecation: ["legacy-js-api"]
+    silenceDeprecations: ["legacy-js-api"]
   }
 };
 
