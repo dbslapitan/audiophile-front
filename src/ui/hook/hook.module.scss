@@ -1,0 +1,45 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.hook{
+    margin-top: 7.5rem;
+
+    @include tablet{
+        width: 43.0625rem;
+    }
+    
+    &__image{
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 300px;
+    }
+
+    &__heading{
+        @include heading-04;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 2.5rem;
+
+        &--peach{
+            color: $peach-00;
+        }
+
+        @include tablet{
+            width: 35.8125rem;
+            margin: 3.9375rem auto 0;
+        }
+    }
+
+    &__description{
+        @include body-01;
+        margin-top: 2rem;
+        text-align: center;
+        opacity: 0.5;
+
+        @include tablet{
+            width: 35.8125rem;
+            margin: 2rem auto 0;
+        }
+    }
+}
