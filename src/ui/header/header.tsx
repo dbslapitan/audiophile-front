@@ -4,6 +4,7 @@ import cart from "../../../public/icons/icon-cart.svg";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import NavToggle from "../nav-toggle/nav-toggle";
+import NavLinks from "../nav-links/nav-links";
 
 export default function Header(){
     return(
@@ -13,6 +14,7 @@ export default function Header(){
                 <Link href={"/"}>
                     <Image src={logo} alt="audiophile logo" height={25} width={143}/>
                 </Link>
+                <NavLinks className={`${styles["header__links"]}`}/>
                 <Link href={"#"} className={`${styles["header__cart"]}`}>
                     <Image src={cart} alt="cart icon" width={23} height={20}/>
                 </Link>

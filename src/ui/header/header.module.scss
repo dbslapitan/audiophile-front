@@ -35,3 +35,18 @@
         }
     }
 }
+
+.header{
+
+    .header{
+        &__links{
+            display: none;
+
+            @include mid-tablet{
+                display: flex;
+                margin: 0;
+                width: fit-content;
+            }
+        }
+    }
+}

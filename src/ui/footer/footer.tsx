@@ -5,6 +5,7 @@ import logo from "../../../public/logo.svg";
 import facebook from "../../../public/icons/icon-facebook.svg";
 import twitter from "../../../public/icons/icon-twitter.svg";
 import instagram from "../../../public/icons/icon-instagram.svg";
+import NavLinks from "../nav-links/nav-links";
 
 export default function Footer() {
     return (
@@ -16,28 +17,7 @@ export default function Footer() {
                 <Link href={`/`} className={`${styles["footer__logo"]}`}>
                     <Image src={logo} alt="site logo" height={25} width={143} />
                 </Link>
-                <ul className={`${styles["footer__links"]}`}>
-                    <li>
-                        <Link href={`/`} className={`${styles["footer__link"]}`}>
-                            HOME
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={`/headphones`} className={`${styles["footer__link"]}`}>
-                            HEADPHONES
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={`/speakers`} className={`${styles["footer__link"]}`}>
-                            SPEAKERS
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href={`/earphones`} className={`${styles["footer__link"]}`}>
-                            EARPHONES
-                        </Link>
-                    </li>
-                </ul>
+                <NavLinks />
                 <p className={`${styles["footer__description"]}`}>Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
                 <p className={`${styles["footer__description"]}`}>Copyright 2021. All Rights Reserved</p>
                 <ul className={`${styles["socials"]}`}>

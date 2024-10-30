@@ -1,0 +1,28 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.links{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: $white-00;
+
+    @include tablet{
+        margin-top: 2rem;
+        flex-direction: row;
+        column-gap: 2.125rem;
+    }
+
+    @include mid-tablet{
+        width: 50%;
+        margin: 0 0 0 auto;
+        justify-content: flex-end;
+    }
+
+    &__link{
+        @include subtitle;
+        letter-spacing: 2px;
+        margin: auto;
+    }
+}
