@@ -5,14 +5,11 @@ import headphones from "../../../public/thumbnails/image-category-thumbnail-head
 import earphones from "../../../public/thumbnails/image-category-thumbnail-earphones.png";
 import speakers from "../../../public/thumbnails/image-category-thumbnail-speakers.png";
 
-export default function ThumbnailNav() {
+export default function ThumbnailNav({overlay = true}: {overlay?: boolean}) {
     
     return (
         <ul className={`content ${styles["links"]}`}>
-            <li className={`${styles["links__item"]} ${styles["links__item--home"]}`}>
-                <Link href={"/"} className={`${styles["links__link"]}`}>HOME</Link>
-            </li>
-            <li className={`${styles["links__item"]} ${styles["links__item--first"]}`}>
+            <li className={`${styles["links__item"]}`}>
                 <Link href={"/headphones"} className={`content ${styles["links__link"]}`}>
                     <Image src={headphones} alt="thumbnail for headphones category" className={`${styles["links__image"]}`} height={104} />
                     HEADPHONES

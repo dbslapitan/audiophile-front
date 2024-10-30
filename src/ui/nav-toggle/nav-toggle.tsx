@@ -46,7 +46,9 @@ export default function NavToggle() {
                 <Image src={hamburger} alt="hamburger icon" height={15} width={16} />
             </button>
             <div className={`${styles["nav__overlay"]} ${isOpen ? styles["nav__overlay--show"] : ""}`}>
-                <ThumbnailNav />
+                <div className={`${styles["nav__content"]}`}>
+                    <ThumbnailNav overlay={true}/>
+                </div>
             </div>
         </nav>
     );

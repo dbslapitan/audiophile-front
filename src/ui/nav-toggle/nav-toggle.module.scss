@@ -7,6 +7,16 @@
         order: 1;
     }
 
+    &__content{
+        background-color: $white-00;
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 5.3125rem 0 2.1875rem;
+
+        @include tablet{
+            padding: 6.75rem 0 4.1875rem;
+        }
+    }
+
     &__overlay{
         position: absolute;
         top: 100%;

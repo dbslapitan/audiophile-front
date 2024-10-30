@@ -2,28 +2,23 @@
 @use "../../styles/variables" as *;
 
 .links{
-    background-color: $white-00;
-    border-radius: 0 0 0.5rem 0.5rem;
 
     @include tablet{
         display: flex;
+        justify-content: space-between;
     }
 
     &__item{
         background-color: $white-00;
-        padding-top: 4.25rem;
+        margin-top: 4.25rem;
 
-        &--first{
-            padding-top: 5.25rem;
+        &:first-of-type{
+            margin-top: 0;
         }
 
-        &:last-of-type{
-            padding-bottom: 2.1875rem;
-            border-radius: 0 0 0.5rem 0.5rem;
-        }
-
-        &--home{
-            display: none;
+        @include tablet{
+            margin: 0;
+            width: 32.36574%;
         }
     }
 
@@ -38,6 +33,11 @@
         background-color: $white-02;
         position: relative;
         width: 20.4375rem;
+
+        @include tablet{
+            width: 100%;
+            max-width: 21.875rem;
+        }
     }
 
     &__image{
