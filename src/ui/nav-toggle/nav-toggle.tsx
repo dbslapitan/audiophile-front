@@ -11,8 +11,12 @@ export default function NavToggle() {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        // const header = document.querySelector("header");
-        // const body = document.body;
+        if(isOpen){
+            document.body.style.overflowY = "hidden";
+        }
+        else{
+            document.body.style.overflowY = "auto";
+        }
 
         const globalCloseHandler = () => {
             if(isOpen){
