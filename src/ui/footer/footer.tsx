@@ -38,7 +38,7 @@ export default function Footer() {
                         </Link>
                     </li>
                 </ul>
-                <p className={`${styles["footer__description"]}`}>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
+                <p className={`${styles["footer__description"]}`}>Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.</p>
                 <p className={`${styles["footer__description"]}`}>Copyright 2021. All Rights Reserved</p>
                 <ul className={`${styles["socials"]}`}>
                     <li>

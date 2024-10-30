@@ -1,0 +1,31 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.nav{
+
+    @include mid-tablet{
+        order: 1;
+    }
+
+    &__overlay{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        height: calc(100vh - 5.625rem);
+        background-color: #00000066;
+        z-index: 1;
+
+        &--show{
+            display: unset;
+        }
+    }
+
+    &__toggle{
+
+        @include mid-tablet{
+            display: none;
+        }
+    }
+}
