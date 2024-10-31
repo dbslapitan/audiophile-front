@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./hook.module.scss";
 import mobile from "../../../public/images/hook/mobile-best-gear.jpg";
 import tablet from "../../../public/images/hook/tablet-best-gear.jpg";
