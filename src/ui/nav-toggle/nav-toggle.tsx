@@ -47,7 +47,7 @@ export default function NavToggle() {
     return (
         <nav className={`${styles["nav"]}`} >
             <button className={`${styles["nav__toggle"]}`} onClick={toggleHandler}>
-                <Image src={hamburger} alt="hamburger icon" height={15} width={16} />
+                <Image className={`${styles["nav__hamburger"]}`} src={hamburger} alt="hamburger icon" height={15} width={16} />
             </button>
             <div className={`${styles["nav__overlay"]} ${isOpen ? styles["nav__overlay--show"] : ""}`}>
                 <div className={`${styles["nav__content"]}`}>
