@@ -1,6 +1,8 @@
 @use "../styles/mixin" as *;
 @use "../styles/variables" as *;
 
+/* Normalization — START */
+
 html{
     box-sizing: border-box;
     height: 100%;
@@ -16,6 +18,25 @@ body{
     box-sizing: inherit;
     color: inherit;
 }
+
+a{
+    text-decoration: none;
+    font-size: 0;
+    display: block;
+    width: fit-content;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+/* Normalization — END */
+
 
 .content{
     width: 87.2%;
@@ -38,21 +59,5 @@ body{
 }
 
 button{
-    background-color: inherit;
     border: none;
-}
-
-a{
-    text-decoration: none;
-    font-size: 0;
-    display: block;
-    width: fit-content;
-}
-
-ul{
-    list-style: none;
-}
-
-    img{
-        max-inline-size: 100%;
 }
