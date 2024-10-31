@@ -23,17 +23,17 @@ export default function Footer() {
                 <ul className={`${styles["socials"]}`}>
                     <li>
                         <a href={"https://www.facebook.com"} target="_blank">
-                            <Image src={facebook} alt="facebook logo" height={24} width={24} />
+                            <Image className={`${styles["socials__image"]}`} src={facebook} alt="facebook logo" height={24} width={24} />
                         </a>
                     </li>
                     <li>
                         <a href={"https://www.twitter.com"} target="_blank">
-                            <Image src={twitter} alt="twitter logo" height={20} width={24} />
+                            <Image className={`${styles["socials__image"]}`} src={twitter} alt="twitter logo" height={20} width={24} />
                         </a>
                     </li>
                     <li>
                         <a href={"https://www.instagram.com"} target="_blank">
-                            <Image src={instagram} alt="instagram logo" height={24} width={24} />
+                            <Image className={`${styles["socials__image"]}`} src={instagram} alt="instagram logo" height={24} width={24} />
                         </a>
                     </li>
                 </ul>

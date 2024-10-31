@@ -91,4 +91,11 @@
     @include mid-tablet{
         bottom: 8.5rem;
     }
+
+    &__image{
+
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(4442%) hue-rotate(326deg) brightness(89%) contrast(88%);
+        }
+    }
 }

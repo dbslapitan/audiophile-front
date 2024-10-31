@@ -24,5 +24,9 @@
         @include subtitle;
         letter-spacing: 2px;
         margin: auto;
+
+        &:hover{
+            color: $peach-00;
+        }
     }
 }

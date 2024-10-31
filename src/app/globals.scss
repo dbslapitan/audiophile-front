@@ -76,5 +76,9 @@ button{
     
     &--peach{
         background-color: $peach-00;
+
+        &:hover{
+            background-color: $peach-01;
+        }
     }
 }
