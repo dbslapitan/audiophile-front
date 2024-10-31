@@ -35,6 +35,16 @@ img{
     block-size: auto;
 }
 
+picture{
+    display: block;
+    font-size: 0;
+    overflow: hidden;
+}
+
+button{
+    border: none;
+}
+
 /* Normalization — END */
 
 
@@ -58,6 +68,12 @@ img{
     }
 }
 
-button{
-    border: none;
+.btn{
+    @include body_03;
+    padding: 0.9375rem 2rem;
+    color: $white-00;
+    
+    &--peach{
+        background-color: $peach-00;
+    }
 }
