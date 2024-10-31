@@ -30,12 +30,22 @@ export default function NavToggle() {
             }
         }
 
+        const resizeHandler = () => {
+            if(window.innerWidth <= 1234){
+                if(isOpen){
+                    setIsOpen(false);
+                }
+            }
+        };
+
         window.addEventListener("click", globalCloseHandler);
         window.addEventListener("keyup", escapeEvent);
+        window.addEventListener("resize", resizeHandler);
 
         return () => {
             window.removeEventListener("click", globalCloseHandler);
             window.removeEventListener("keyup", escapeEvent);
+            window.removeEventListener("resize", resizeHandler);
         }
     });
 

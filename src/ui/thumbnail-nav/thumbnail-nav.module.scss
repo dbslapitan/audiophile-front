@@ -8,6 +8,12 @@
         justify-content: space-between;
     }
 
+    &__overlay{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &__item{
         background-color: $white-00;
         margin-top: 4.25rem;
@@ -37,6 +43,10 @@
         @include tablet{
             width: 100%;
             max-width: 21.875rem;
+        }
+
+        &:hover > .links__shop{
+            color: $peach-00;
         }
     }
 

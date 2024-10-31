@@ -4,6 +4,7 @@ import Link from "next/link";
 import mobile from "../../public/images/home/mobile-hero.jpg";
 import tablet from "../../public/images/home/tablet-hero.jpg";
 import desktop from "../../public/images/home/desktop-hero.jpg";
+import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
                 <img src={mobile.src} alt="xx99 mark 2 headphone" />
             </picture>
         </section>
+        <nav className={`content ${styles["home__subnav"]}`}>
+            <ThumbnailNav overlay={false} />
+        </nav>
         <Hook />
     </main>
   );
