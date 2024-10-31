@@ -3,6 +3,7 @@
 
 .home{
     padding-bottom: 7.5rem;
+    overflow-x: hidden;
 
     &__subnav{
         margin-top: 9.25rem;
@@ -116,5 +117,54 @@
         @include desktop{
             width: 69.375rem;
         }
+    }
+}
+
+.zx9{
+    position: relative;
+    background-color: $peach-00;
+    width: 20.4375rem;
+    margin: 7.5rem auto 0;
+    border-radius: 0.5rem;
+
+    &__picture{
+        background-image: url("../../public/images/home/pattern-circles.svg");
+        background-size: 34.875rem 34.875rem;
+        padding: 3.4375rem 0 10.9375rem;
+        text-align: center;
+        background-position: bottom center;
+    }
+
+    &__image{
+        width: 10.75rem;
+    }
+
+    &__last{
+        margin-top: -7.4375rem;
+        padding: 0 0 3.4375rem;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__title{
+        @include heading-02;
+        width: 15rem;
+        margin: auto;
+        letter-spacing: 1.286px;
+        line-height: 1.11111;
+        text-align: center;
+        color: $white-00;
+    }
+
+    &__description{
+        width: 17.5rem;
+        margin: 1.5rem auto 0;
+        text-align: center;
+        color: $white-00;
+        opacity: 0.75;
+    }
+
+    &__link{
+        margin: 1.5rem auto 0;
     }
 }
