@@ -5,7 +5,9 @@ import mobile from "../../public/images/home/mobile-hero.jpg";
 import tablet from "../../public/images/home/tablet-hero.jpg";
 import desktop from "../../public/images/home/desktop-hero.jpg";
 import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
-import  zx9Tablet from "../../public/images/home/mobile-zx9.png";
+import  zx9Mobile from "../../public/images/home/mobile-zx9.png";
+import  zx9Tablet from "../../public/images/home/tablet-zx9.png";
+import  zx9Desktop from "../../public/images/home/desktop-zx9.png";
 
 export default function Home() {
     return (
@@ -21,14 +23,17 @@ export default function Home() {
                 </div>
                 <picture className={`${styles["hero__right"]}`}>
                     <source media="(max-width: 767px)" srcSet={mobile.src} />
-                    <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={tablet.src} />
-                    <source media="(min-width: 1440px)" srcSet={desktop.src} />
+                    <source media="(min-width: 768px) and (max-width: 1233px)" srcSet={tablet.src} />
+                    <source media="(min-width: 1234px)" srcSet={desktop.src} />
                     <img src={mobile.src} alt="xx99 mark 2 headphone" />
                 </picture>
             </section>
-            <section className={`${styles["zx9"]}`}>
+            <section className={`content ${styles["zx9"]}`}>
                 <picture className={`${styles["zx9__picture"]}`}>
-                    <img className={`${styles["zx9__image"]}`} src={zx9Tablet.src} alt="zx9 speaker" />
+                    <source media="(max-width: 767px)" srcSet={zx9Mobile.src}/>
+                    <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={zx9Tablet.src}/>
+                    <source media="(min-width: 1440px)" srcSet={zx9Desktop.src}/>
+                    <img className={`${styles["zx9__image"]}`} src={zx9Mobile.src} alt="zx9 speaker" />
                 </picture>
                 <div className={`${styles["zx9__last"]}`}>
                     <h2 className={`${styles["zx9__title"]}`}>ZX9 SPEAKER</h2>
