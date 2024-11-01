@@ -5,12 +5,15 @@ import mobile from "../../public/images/home/mobile-hero.jpg";
 import tablet from "../../public/images/home/tablet-hero.jpg";
 import desktop from "../../public/images/home/desktop-hero.jpg";
 import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
-import  zx9Mobile from "../../public/images/home/mobile-zx9.png";
-import  zx9Tablet from "../../public/images/home/tablet-zx9.png";
-import  zx9Desktop from "../../public/images/home/desktop-zx9.png";
-import  zx7Mobile from "../../public/images/home/mobile-zx7.jpg";
-import  zx7Tablet from "../../public/images/home/tablet-zx7.jpg";
-import  zx7Desktop from "../../public/images/home/desktop-zx7.jpg";
+import zx9Mobile from "../../public/images/home/mobile-zx9.png";
+import zx9Tablet from "../../public/images/home/tablet-zx9.png";
+import zx9Desktop from "../../public/images/home/desktop-zx9.png";
+import zx7Mobile from "../../public/images/home/mobile-zx7.jpg";
+import zx7Tablet from "../../public/images/home/tablet-zx7.jpg";
+import zx7Desktop from "../../public/images/home/desktop-zx7.jpg";
+import yx1Mobile from "../../public/images/home/mobile-yx1.jpg";
+import yx1Tablet from "../../public/images/home/tablet-yx1.jpg";
+import yx1Desktop from "../../public/images/home/desktop-yx1.jpg";
 
 export default function Home() {
     return (
@@ -53,6 +56,18 @@ export default function Home() {
                 </picture>
                 <div className={`${styles["zx7__texts"]}`}>
                     <h2 className={`${styles["zx7__title"]}`}>ZX7 SPEAKER</h2>
+                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/"}>SEE PRODUCT</Link>
+                </div>
+            </section>
+            <section className={`content ${styles["yx1"]}`}>
+                <picture className={`${styles["yx1__picture"]}`}>
+                    <source media="(max-width: 767px)" srcSet={yx1Mobile.src}/>
+                    <source media="(min-width: 768px) and (max-width: 1233px)" srcSet={yx1Tablet.src}/>
+                    <source media="(min-width: 1234px)" srcSet={yx1Desktop.src}/>
+                    <img className={`${styles["yx1__image"]}`} src={yx1Mobile.src} alt="yx1 speaker" />
+                </picture>
+                <div className={`${styles["yx1__texts"]}`}>
+                    <h2 className={`${styles["zx7__title"]}`}>YX1 EARPHONES</h2>
                     <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/"}>SEE PRODUCT</Link>
                 </div>
             </section>

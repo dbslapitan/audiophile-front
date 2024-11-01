@@ -278,3 +278,26 @@
         margin-top: 2rem;
     }
 }
+
+.yx1{
+    margin-top: 1.5rem;
+
+    &__picture{
+        overflow: hidden;
+        border-radius: 0.5rem;
+        height: 12.5rem;
+    }
+
+    &__image{
+        height: inherit;
+    }
+
+    &__texts{
+        background-color: $white-02;
+        margin-top: 1.5rem;
+        border-radius: 0.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+
+}
