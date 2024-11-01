@@ -84,5 +84,20 @@ button{
 
     &--black{
         background-color: $black-00;
+
+        &:hover{
+            background-color: #4C4C4C;
+        }
+    }
+
+    &--transparent{
+        background-color: transparent;
+        border: 1px solid $black-00;
+        color: $black-00;
+
+        &:hover{
+            background-color: $black-00;
+            color: $white-00;
+        }
     }
 }

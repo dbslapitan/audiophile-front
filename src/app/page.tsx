@@ -8,6 +8,9 @@ import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
 import  zx9Mobile from "../../public/images/home/mobile-zx9.png";
 import  zx9Tablet from "../../public/images/home/tablet-zx9.png";
 import  zx9Desktop from "../../public/images/home/desktop-zx9.png";
+import  zx7Mobile from "../../public/images/home/mobile-zx7.jpg";
+import  zx7Tablet from "../../public/images/home/tablet-zx7.jpg";
+import  zx7Desktop from "../../public/images/home/desktop-zx7.jpg";
 
 export default function Home() {
     return (
@@ -39,6 +42,18 @@ export default function Home() {
                     <h2 className={`${styles["zx9__title"]}`}>ZX9 SPEAKER</h2>
                     <p className={`${styles["zx9__description"]}`}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
                     <Link className={`btn btn--black ${styles["zx9__link"]}`} href={"/"}>SEE PRODUCT</Link>
+                </div>
+            </section>
+            <section className={`${styles["zx7"]}`}>
+                <picture>
+                    <source media="(max-width: 767px)" srcSet={zx7Mobile.src}/>
+                    <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={zx7Tablet.src}/>
+                    <source media="(min-width: 1440px)" srcSet={zx7Desktop.src}/>
+                    <img className={`${styles["zx7__image"]}`} src={zx7Mobile.src} alt="zx7 speaker" />
+                </picture>
+                <div className={`${styles["zx7__texts"]}`}>
+                    <h2 className={`${styles["zx7__title"]}`}>ZX7 SPEAKER</h2>
+                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/"}>SEE PRODUCT</Link>
                 </div>
             </section>
             <nav className={`content ${styles["home__subnav"]}`}>

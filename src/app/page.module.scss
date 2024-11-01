@@ -232,3 +232,31 @@
         }
     }
 }
+
+.zx7{
+    margin: 1.5rem auto 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-height: 20rem;
+    text-align: right;
+    width: 20.4375rem;
+    position: relative;
+
+    &__image{
+        height: 20rem;
+    }
+
+    &__texts{
+        position: absolute;
+        top: 6.3125rem;
+        left: 1.625rem;
+    }
+
+    &__title{
+        @include heading-04;
+    }
+
+    &__link{
+        margin-top: 2rem;
+    }
+}
