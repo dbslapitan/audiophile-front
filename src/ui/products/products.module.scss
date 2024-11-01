@@ -19,11 +19,19 @@
     &__image{
         width: 20.4375rem;
         height: inherit;
+
+        @include tablet{
+            width: 43.0625rem;
+        }
     }
 
     &__texts{
         text-align: center;
         margin-top: 2rem;
+
+        @include tablet{
+            margin-top: 3.25rem;
+        }
     }
 
     &__new{
@@ -40,14 +48,27 @@
         @include heading-04;
         margin: 1.5rem auto 0;
         text-transform: uppercase;
-        width: 20.4375rem;
+
+        @include tablet{
+            @include heading-02;
+            margin-top:  1rem;
+        }
+    }
+
+    &__category{
+        display: block;
     }
 
     &__description{
         @include body-01;
         opacity: 0.5;
-        width: 20.4375rem;
+        min-width: 20.4375rem;
         margin: 1.5rem auto 0;
+        max-width: 35rem;
+
+        @include tablet{
+            margin-top: 2rem;
+        }
     }
 
     &__link{
