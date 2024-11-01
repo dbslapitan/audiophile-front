@@ -6,9 +6,15 @@
 }
 
 .product{
+    margin-top: 7.5rem;
+
+    &:first-of-type{
+        margin-top: 0;
+    }
     
     @include mid-tablet{
         display: flex;
+        justify-content: space-between;
     }
 
     &__picture{
@@ -31,6 +37,11 @@
         @include tablet{
             width: 43.0625rem;
         }
+
+        @include mid-tablet{
+            width: inherit;
+            height: inherit;
+        }
     }
 
     &__texts{
@@ -42,14 +53,20 @@
         }
 
         @include mid-tablet{
-            flex-grow: 1;
             text-align: left;
-            padding: 6.8125rem 0 0 7.8125rem;
-            margin-top: 0;
+            width: 27.8125rem;
+            margin-top: 6.8125rem;
         }
 
         &--old{
-            padding-top: 7.875rem;
+
+            @include mid-tablet{
+                margin-top: 7.875rem;
+            }
+        }
+
+        &--switch{
+            order: -1;
         }
     }
 
