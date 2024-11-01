@@ -26,8 +26,8 @@ export default function Home() {
                 </div>
                 <picture className={`${styles["hero__right"]}`}>
                     <source media="(max-width: 767px)" srcSet={mobile.src} />
-                    <source media="(min-width: 768px) and (max-width: 1233px)" srcSet={tablet.src} />
-                    <source media="(min-width: 1234px)" srcSet={desktop.src} />
+                    <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={tablet.src} />
+                    <source media="(min-width: 1440px)" srcSet={desktop.src} />
                     <img src={mobile.src} alt="xx99 mark 2 headphone" />
                 </picture>
             </section>
