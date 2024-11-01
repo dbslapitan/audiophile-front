@@ -1,0 +1,19 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.title{
+    @include heading-04;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: $black-03;
+    color: $white-00;
+
+    @include mid-mobile{
+        @include heading-02;
+        padding: 6.5625rem 0 6.0625rem;
+    }
+
+    @include mid-tablet{
+        padding-top: 6.125rem;
+    }
+}
