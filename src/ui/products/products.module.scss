@@ -7,6 +7,9 @@
 
 .product{
     
+    @include mid-tablet{
+        display: flex;
+    }
 
     &__picture{
         border-radius: 0.5rem;
@@ -14,6 +17,11 @@
         height: 22rem;
         text-align: center;
         background-color: $white-02;
+
+        @include mid-tablet{
+            width: 33.75rem;
+            height: 35rem;
+        }
     }
 
     &__image{
@@ -31,6 +39,17 @@
 
         @include tablet{
             margin-top: 3.25rem;
+        }
+
+        @include mid-tablet{
+            flex-grow: 1;
+            text-align: left;
+            padding: 6.8125rem 0 0 7.8125rem;
+            margin-top: 0;
+        }
+
+        &--old{
+            padding-top: 7.875rem;
         }
     }
 
@@ -73,5 +92,9 @@
 
     &__link{
         margin: 1.5rem auto 0;
+
+        @include mid-tablet{
+            margin: 2rem 0 0;
+        }
     }
 }

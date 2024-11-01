@@ -33,7 +33,7 @@ export default function Page(){
     }];
 
     return(
-        <main>
+        <main className={`${styles["headphones"]}`}>
             <Title text="HEADPHONES"/>
             <Products data={headphones}/>
             <Hook />
