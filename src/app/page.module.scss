@@ -281,15 +281,44 @@
 
 .yx1{
     margin-top: 1.5rem;
+    width: 20.4375rem;
+
+    @include tablet{
+        width: 43.0625rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include tablet{
+        width: 69.375rem;
+    }
 
     &__picture{
         overflow: hidden;
         border-radius: 0.5rem;
         height: 12.5rem;
+
+        @include tablet{
+            width: 21.1875rem;
+            height: 20rem;
+        }
+
+        @include mid-tablet{
+            width: 33.75rem;
+        }
     }
 
     &__image{
         height: inherit;
+
+        @include tablet{
+            width: 21.1875rem;
+            height: 20rem;
+        }
+
+        @include tablet{
+            width: inherit;
+        }
     }
 
     &__texts{
@@ -297,7 +326,17 @@
         margin-top: 1.5rem;
         border-radius: 0.5rem;
         padding: 2.5rem 1.5rem;
+
+        @include tablet{
+            width: 21.1875rem;
+            height: 20rem;
+            margin-top: 0;
+            padding: 6.3125rem 2.625rem;
+        }
+
+        @include mid-tablet{
+            width: 33.75rem;
+            padding-left: 5.9375rem;
+        }
     }
-
-
 }
