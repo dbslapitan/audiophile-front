@@ -47,8 +47,8 @@ export default function Home() {
             <section className={`${styles["zx7"]}`}>
                 <picture>
                     <source media="(max-width: 767px)" srcSet={zx7Mobile.src}/>
-                    <source media="(min-width: 768px) and (max-width: 1439px)" srcSet={zx7Tablet.src}/>
-                    <source media="(min-width: 1440px)" srcSet={zx7Desktop.src}/>
+                    <source media="(min-width: 768px) and (max-width: 1233px)" srcSet={zx7Tablet.src}/>
+                    <source media="(min-width: 1234px)" srcSet={zx7Desktop.src}/>
                     <img className={`${styles["zx7__image"]}`} src={zx7Mobile.src} alt="zx7 speaker" />
                 </picture>
                 <div className={`${styles["zx7__texts"]}`}>

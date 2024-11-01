@@ -242,6 +242,16 @@
     width: 20.4375rem;
     position: relative;
 
+    @include tablet{
+        width: 43.0625rem;
+        margin-top: 2rem;
+    }
+
+    @include mid-tablet{
+        width: 69.375rem;
+        margin-top: 3rem;
+    }
+
     &__image{
         height: 20rem;
     }
@@ -250,6 +260,14 @@
         position: absolute;
         top: 6.3125rem;
         left: 1.625rem;
+
+        @include tablet{
+            left: 3.875rem;
+        }
+
+        @include mid-tablet{
+            left: 6rem;
+        }
     }
 
     &__title{
