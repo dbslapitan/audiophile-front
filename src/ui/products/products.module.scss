@@ -1,0 +1,56 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.products{
+    margin: 4rem auto 0;
+}
+
+.product{
+    
+
+    &__picture{
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 22rem;
+        text-align: center;
+        background-color: $white-02;
+    }
+
+    &__image{
+        width: 20.4375rem;
+        height: inherit;
+    }
+
+    &__texts{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__new{
+        @include overline;
+        color: $peach-00;
+        display: none;
+
+        &--show{
+            display: block;
+        }
+    }
+
+    &__name{
+        @include heading-04;
+        margin: 1.5rem auto 0;
+        text-transform: uppercase;
+        width: 20.4375rem;
+    }
+
+    &__description{
+        @include body-01;
+        opacity: 0.5;
+        width: 20.4375rem;
+        margin: 1.5rem auto 0;
+    }
+
+    &__link{
+        margin: 1.5rem auto 0;
+    }
+}
