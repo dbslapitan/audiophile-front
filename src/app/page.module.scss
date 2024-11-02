@@ -5,7 +5,11 @@
     padding-bottom: 7.5rem;
 
     &__subnav{
-        margin-top: 9.25rem;
+        margin-top: 10.75rem;
+
+        @include mid-tablet{
+            margin-top: 15rem;
+        }
     }
 }
 

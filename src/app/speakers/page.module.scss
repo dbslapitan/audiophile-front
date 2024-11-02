@@ -3,8 +3,16 @@
 
 .speakers{
     padding-bottom: 7.5rem;
-
+    
     @include mid-tablet{
         padding-bottom: 10rem;
+    }
+
+    &__subnav{
+        margin-top: 10.75rem;
+
+        @include mid-tablet{
+            margin-top: 15rem;
+        }
     }
 }

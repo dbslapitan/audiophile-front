@@ -12,6 +12,7 @@ import xx59Mobile from "../../../public/images/headphones/xx59/category/mobile-x
 import xx59Tablet from "../../../public/images/headphones/xx59/category/tablet-xx59.jpg";
 import xx59MDesktop from "../../../public/images/headphones/xx59/category/desktop-xx59.jpg";
 import Products from "@/ui/products/products";
+import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
 
 export default function Page(){
 
@@ -84,6 +85,9 @@ export default function Page(){
         <main className={`${styles["headphones"]}`}>
             <Title text="HEADPHONES"/>
             <Products data={headphones}/>
+            <nav className={`content ${styles["headphones__subnav"]}`}>
+                <ThumbnailNav overlay={false} />
+            </nav>
             <Hook />
         </main>
     );
