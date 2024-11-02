@@ -3,6 +3,14 @@
 
 .products{
     margin: 4rem auto 0;
+
+    @include tablet{
+        margin-top: 7.5rem;
+    }
+
+    @include mid-tablet{
+        margin-top: 10rem;
+    }
 }
 
 .product{
@@ -15,6 +23,7 @@
     @include mid-tablet{
         display: flex;
         justify-content: space-between;
+        margin-top: 10rem;
     }
 
     &__picture{

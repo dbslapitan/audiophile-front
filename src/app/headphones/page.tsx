@@ -8,6 +8,9 @@ import xx99m2Desktop from "../../../public/images/headphones/xx99-2/category/des
 import xx99m1Mobile from "../../../public/images/headphones/xx99-1/category/mobile-x99-1.jpg";
 import xx99m1Tablet from "../../../public/images/headphones/xx99-1/category/tablet-x99-1.jpg";
 import xx99m1Desktop from "../../../public/images/headphones/xx99-1/category/desktop-x99-1.jpg";
+import xx59Mobile from "../../../public/images/headphones/xx59/category/mobile-xx59.jpg";
+import xx59Tablet from "../../../public/images/headphones/xx59/category/tablet-xx59.jpg";
+import xx59MDesktop from "../../../public/images/headphones/xx59/category/desktop-xx59.jpg";
 import Products from "@/ui/products/products";
 
 export default function Page(){
@@ -53,7 +56,28 @@ export default function Page(){
                 mediaQuery: "(min-width: 1234px)"
             }
         },
-        alt: "xx99 mark 2 image"
+        alt: "xx99 mark 1 image"
+    }, {
+        isNew: false,
+        category: "headphones",
+        name: "XX59",
+        description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        urlSegment: "xx59",
+        images: {
+            mobile: {
+                src: xx59Mobile.src,
+                mediaQuery: "(max-width: 767px)"
+            },
+            tablet: {
+                src: xx59Tablet.src,
+                mediaQuery: "(min-width: 768px) and (max-width: 1233px)"
+            },
+            desktop: {
+                src: xx59MDesktop.src,
+                mediaQuery: "(min-width: 1234px)"
+            }
+        },
+        alt: "xx59 image"
     }];
 
     return(
