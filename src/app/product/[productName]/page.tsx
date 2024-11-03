@@ -30,6 +30,24 @@ export default async function ProductPage({ params }: { params: { productName: s
                         <AddToCart />
                     </div>
                 </section>
+                <section className={`content ${styles["additional"]}`}>
+                    <div className={`${styles["features"]}`}>
+                        <h2 className={`${styles["additional__title"]}`}>FEATURES</h2>
+                        <p className={`${styles["additional__paragraph"]}`}>{data.features}</p>
+                    </div>
+                    <div className={`${styles["items"]}`}>
+                        <h2 className={`${styles["additional__title"]}`}>IN THE BOX</h2>
+                        <ul className={`${styles["items__list"]}`}>
+                            {
+                                (data.includes as {quantity: number, item: string}[]).map((item, index) => {
+                                    return(
+                                        <li key={index} className={`${styles["item"]}`}><span className={`${styles["item__quantity"]}`}>{item.quantity}x</span>{item.item}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                </section>
             </main>
         );
     }

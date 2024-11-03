@@ -131,7 +131,7 @@
         @include body-01;
         opacity: 0.5;
         min-width: 20.4375rem;
-        margin: 1.5rem auto 0;
+        margin: 1.5rem auto 0 0;
         max-width: 35rem;
 
         @include tablet{
@@ -144,3 +144,62 @@
         margin-top: 1.5rem;
     }
 }
+
+.additional{
+    margin-top: 5.5rem;
+
+    @include tablet{
+        margin-top: 7.5rem;
+    }
+
+    @include mid-tablet{
+        margin-top: 10rem;
+    }
+
+    &__title{
+        @include heading-05;
+        line-height: 1.5;
+        letter-spacing: 0.857px;
+
+        @include tablet{
+            @include heading-03;
+        }
+    }
+
+    &__paragraph{
+        @include body-01;
+        margin-top: 1.5rem;
+        white-space: pre;
+        text-wrap: wrap;
+        opacity: 0.5
+    }
+}
+
+.features{
+}
+
+.items{
+    margin-top: 5.5rem;
+
+    &__list{
+        margin-top: 1.5rem;
+    }
+}
+
+.item{
+    @include body-01;
+    margin-top: 0.5rem;
+    color: #00000080;
+
+    &:first-of-type{
+        margin-top: 0;
+    }
+
+    &__quantity{
+        font-weight: 700;
+        color: $peach-01;
+        width: 2rem;
+        display: inline-block;
+    }
+}
+
