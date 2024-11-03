@@ -13,7 +13,7 @@ export default function Products({data}: {data: Product[]}){
                     const isSwitch = (index + 1) % 2 === 0;
 
                     return(
-                        <li key={`${product.name}`} className={`${styles["product"]}`}>
+                        <li key={`${product.slug}`} className={`${styles["product"]}`}>
                             <picture className={`${styles["product__picture"]}`}>
                                 <source srcSet={`${URI}${product.categoryImage.mobile}`} media="(max-width: 767px)"/>
                                 <source srcSet={`${URI}${product.categoryImage.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>

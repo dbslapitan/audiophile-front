@@ -1,6 +1,115 @@
 @use "../../../styles/mixin" as *;
 @use "../../../styles/variables" as *;
 
+
 .product{
-    
+    padding-top: 1rem;
+    &__back{
+        @include body-01;
+        opacity: 0.5;
+    }
+}
+
+.heading{
+
+    @include mid-tablet{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10rem;
+    }
+
+    &__picture{
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 22rem;
+        text-align: center;
+        background-color: $white-02;
+        margin-top: 1.5rem;
+
+        @include mid-tablet{
+            width: 33.75rem;
+            height: 35rem;
+        }
+    }
+
+    &__image{
+        width: 20.4375rem;
+        height: inherit;
+
+        @include tablet{
+            width: 43.0625rem;
+        }
+
+        @include mid-tablet{
+            width: inherit;
+            height: inherit;
+        }
+    }
+
+    &__texts{
+        margin-top: 2rem;
+
+        @include tablet{
+            margin-top: 3.25rem;
+        }
+
+        @include mid-tablet{
+            width: 27.8125rem;
+            margin-top: 6.8125rem;
+        }
+
+        &--old{
+            margin-top: 2.5rem;
+
+            @include mid-tablet{
+                margin-top: 7.875rem;
+            }
+        }
+
+        &--switch{
+            order: -1;
+        }
+    }
+
+    &__new{
+        @include overline;
+        color: $peach-00;
+        display: none;
+
+        &--show{
+            display: block;
+        }
+    }
+
+    &__name{
+        @include heading-04;
+        margin: 1.5rem auto 0;
+        text-transform: uppercase;
+
+        @include tablet{
+            @include heading-02;
+            margin-top:  1rem;
+        }
+    }
+
+    &__category{
+        display: block;
+    }
+
+    &__description{
+        @include body-01;
+        opacity: 0.5;
+        min-width: 20.4375rem;
+        margin: 1.5rem auto 0;
+        max-width: 35rem;
+
+        @include tablet{
+            margin-top: 2rem;
+        }
+    }
+
+    &__price{
+        @include heading-06;
+        margin-top: 1.5rem;
+    }
 }
