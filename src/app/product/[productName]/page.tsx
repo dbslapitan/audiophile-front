@@ -6,7 +6,7 @@ import AddToCart from "@/ui/add-to-cart/add-to-cart";
 
 const URI = process.env.NEXT_PUBLIC_URI;
 
-export default async function ProductPage({ params }: { params: { productName: string } }) {
+export default async function ProductPage({ params }: { params: Promise<{productName: string}>}) {
 
     try {
         const dynamicSegments = await params;
