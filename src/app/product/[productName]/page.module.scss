@@ -4,18 +4,38 @@
 
 .product{
     padding-top: 1rem;
+
+    @include tablet{
+        padding-top: 2rem;
+    }
+
+    @include mid-tablet{
+        padding-top: 5rem;
+    }
+
     &__back{
         @include body-01;
         opacity: 0.5;
+
+        @include tablet{
+            width: 100%;
+        }
     }
 }
 
 .heading{
 
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        justify-content: space-between;
+    }
+
     @include mid-tablet{
         display: flex;
         justify-content: space-between;
-        margin-top: 10rem;
+        row-gap: 3.5rem;
     }
 
     &__picture{
@@ -25,6 +45,12 @@
         text-align: center;
         background-color: $white-02;
         margin-top: 1.5rem;
+
+        @include tablet{
+            width: 41%;
+            margin-top: 0;
+            height: 30rem;
+        }
 
         @include mid-tablet{
             width: 33.75rem;
@@ -37,12 +63,12 @@
         height: inherit;
 
         @include tablet{
-            width: 43.0625rem;
+            width: 17.5625rem;
         }
 
         @include mid-tablet{
-            width: inherit;
-            height: inherit;
+            width: 33.75rem;
+            height: 35rem;
         }
     }
 
@@ -50,12 +76,14 @@
         margin-top: 2rem;
 
         @include tablet{
-            margin-top: 3.25rem;
+            margin-top: 2.8125rem;
+            width: 50%;
+            height: 100%;
         }
 
         @include mid-tablet{
             width: 27.8125rem;
-            margin-top: 6.8125rem;
+            margin-top: 4.8125rem;
         }
 
         &--old{
@@ -87,8 +115,11 @@
         text-transform: uppercase;
 
         @include tablet{
-            @include heading-02;
             margin-top:  1rem;
+        }
+
+        @include mid-tablet{
+            @include heading-02;
         }
     }
 

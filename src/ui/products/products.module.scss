@@ -93,6 +93,8 @@
         @include heading-04;
         margin: 1.5rem auto 0;
         text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
 
         @include tablet{
             @include heading-02;
@@ -101,7 +103,7 @@
     }
 
     &__category{
-        display: block;
+        width: 100%;
     }
 
     &__description{

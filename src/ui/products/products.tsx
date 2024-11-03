@@ -11,6 +11,7 @@ export default function Products({data}: {data: Product[]}){
                 data.map((product, index) => {
 
                     const isSwitch = (index + 1) % 2 === 0;
+                    console.log(product);
 
                     return(
                         <li key={`${product.slug}`} className={`${styles["product"]}`}>
