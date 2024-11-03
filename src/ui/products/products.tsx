@@ -2,6 +2,8 @@ import { Product } from "@/models/product";
 import styles from "./products.module.scss";
 import Link from "next/link";
 
+const URI = process.env.NEXT_PUBLIC_URI;
+
 export default function Products({data}: {data: Product[]}){
     return(
         <ul className={`content ${styles["products"]}`}>
@@ -13,10 +15,10 @@ export default function Products({data}: {data: Product[]}){
                     return(
                         <li key={`${product.name}`} className={`${styles["product"]}`}>
                             <picture className={`${styles["product__picture"]}`}>
-                                <source srcSet={product.images.mobile.src} media={product.images.mobile.mediaQuery}/>
-                                <source srcSet={product.images.tablet.src} media={product.images.tablet.mediaQuery}/>
-                                <source srcSet={product.images.desktop.src} media={product.images.desktop.mediaQuery}/>
-                                <img className={`${styles["product__image"]}`} src={product.images.mobile.src} alt={product.alt} />
+                                <source srcSet={`${URI}${product.categoryImage.mobile}`} media="(max-width: 767px)"/>
+                                <source srcSet={`${URI}${product.categoryImage.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
+                                <source srcSet={`${URI}${product.categoryImage.desktop}`} media="(min-width: 1234px)"/>
+                                <img className={`${styles["product__image"]}`} src={`${URI}${product.categoryImage.mobile}`} alt={product.alt} />
                             </picture>
                             <div className={`${styles["product__texts"]} ${product.isNew ? "" : styles["product__texts--old"]} ${isSwitch ? styles["product__texts--switch"] : ""}`}>
                                 <h3 className={`${styles["product__new"]} ${product.isNew ? styles["product__new--show"] : ""}`}>NEW PRODUCT</h3>
