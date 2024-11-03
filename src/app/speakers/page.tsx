@@ -14,10 +14,10 @@ export default async function Page(){
         const {data} = await axios.get(`${URI}/speakers`);
 
         return(
-            <main className={`${styles["earphones"]}`}>
+            <main className={`${styles["speakers"]}`}>
                 <Title text="EARPHONES"/>
                 <Products data={data}/>
-                <nav className={`content ${styles["earphones__subnav"]}`}>
+                <nav className={`content ${styles["speakers__subnav"]}`}>
                     <ThumbnailNav overlay={false} />
                 </nav>
                 <Hook />
