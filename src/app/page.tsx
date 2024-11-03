@@ -24,7 +24,7 @@ export default function Home() {
                     <h1 className={`${styles["hero__heading"]}`}><span className={`${styles["hero__heading--double"]}`}>XX99 MARK II HEADPHONES</span></h1>
                     <p className={`${styles["hero__description"]}`}><span className={`${styles["hero__description--double"]}`}>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</span></p>
                     <div className={`${styles["hero__link"]}`}>
-                        <Link href={`/`} className={`btn btn--peach`}>SEE PRODUCT</Link>
+                        <Link href={`/product/xx99-mark-two-headphones`} className={`btn btn--peach`}>SEE PRODUCT</Link>
                     </div>
                 </div>
                 <picture className={`${styles["hero__right"]}`}>
@@ -44,7 +44,7 @@ export default function Home() {
                 <div className={`${styles["zx9__last"]}`}>
                     <h2 className={`${styles["zx9__title"]}`}>ZX9 SPEAKER</h2>
                     <p className={`${styles["zx9__description"]}`}>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                    <Link className={`btn btn--black ${styles["zx9__link"]}`} href={"/"}>SEE PRODUCT</Link>
+                    <Link className={`btn btn--black ${styles["zx9__link"]}`} href={"/product/zx9-speaker"}>SEE PRODUCT</Link>
                 </div>
             </section>
             <section className={`${styles["zx7"]}`}>
@@ -56,7 +56,7 @@ export default function Home() {
                 </picture>
                 <div className={`${styles["zx7__texts"]}`}>
                     <h2 className={`${styles["zx7__title"]}`}>ZX7 SPEAKER</h2>
-                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/"}>SEE PRODUCT</Link>
+                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/product/zx7-speaker"}>SEE PRODUCT</Link>
                 </div>
             </section>
             <section className={`content ${styles["yx1"]}`}>
@@ -68,7 +68,7 @@ export default function Home() {
                 </picture>
                 <div className={`${styles["yx1__texts"]}`}>
                     <h2 className={`${styles["zx7__title"]}`}>YX1 EARPHONES</h2>
-                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/"}>SEE PRODUCT</Link>
+                    <Link className={`btn btn--transparent ${styles["zx7__link"]}`} href={"/product/yx1-earphones"}>SEE PRODUCT</Link>
                 </div>
             </section>
             <nav className={`content ${styles["home__subnav"]}`}>

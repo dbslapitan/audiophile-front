@@ -1,13 +1,23 @@
+import axios from "axios";
 import styles from "./page.module.scss";
-import { DATA as products } from "@/libs/data";
+import { notFound } from "next/navigation";
 
-export default function ProductPage(){
+const URI = process.env.NEXT_PUBLIC_URI;
 
-    console.log(products);
+export default async function ProductPage({params}: {params: {productName: string}}){
 
-    return(
-        <main>
-
-        </main>
-    );
+    try{
+        const dynamicSegments = await params;
+        const {data} = await axios.get(`${URI}/product/${dynamicSegments.productName}`);
+    
+        return(
+            <main className={`${styles["product"]}`}>
+                
+            </main>
+        );
+    }
+    catch(e){
+        console.log(e);
+        notFound();
+    }
 }

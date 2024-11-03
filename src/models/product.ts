@@ -7,7 +7,7 @@ export interface Product{
     category: string, 
     name: string, 
     description: string, 
-    urlSegment: string, 
+    slug: string, 
     isNew: boolean,
     alt: string
 }

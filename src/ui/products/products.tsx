@@ -24,7 +24,7 @@ export default function Products({data}: {data: Product[]}){
                                 <h3 className={`${styles["product__new"]} ${product.isNew ? styles["product__new--show"] : ""}`}>NEW PRODUCT</h3>
                                 <h2 className={`${styles["product__name"]}`}>{product.name} <span className={`${styles["product__category"]}`}>{product.category}</span></h2>
                                 <p className={`${styles["product__description"]}`}>{product.description}</p>
-                                <Link href={`/${product.category}/${product.urlSegment}`} className={`btn btn--peach ${styles["product__link"]}`}>SEE PRODUCT</Link>
+                                <Link href={`/product/${product.slug}`} className={`btn btn--peach ${styles["product__link"]}`}>SEE PRODUCT</Link>
                             </div>
                         </li>
                     );
