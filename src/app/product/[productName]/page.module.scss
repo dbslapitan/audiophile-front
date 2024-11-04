@@ -154,6 +154,8 @@
 
     @include mid-tablet{
         margin-top: 10rem;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__title{
@@ -171,14 +173,46 @@
         margin-top: 1.5rem;
         white-space: pre;
         text-wrap: wrap;
-        opacity: 0.5
+        opacity: 0.5;
+
+        @include tablet{
+            margin-top: 2rem;
+        }
     }
 }
+
+.features{
+    
+    @include mid-tablet{
+        width: 57.21%;
+    }
+}
+
 .items{
     margin-top: 5.5rem;
 
     &__list{
         margin-top: 1.5rem;
+
+        @include tablet{
+            margin-top: 0;
+        }
+
+        @include mid-tablet{
+            margin-top: 2rem;
+        }
+    }
+
+    @include tablet{
+        width: 34.375rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include mid-tablet{
+        display: block;
+        margin-top: 0;
+        width: 31.53%;
     }
 }
 
