@@ -76,7 +76,7 @@ export default async function ProductPage({ params }: { params: Promise<{product
                         {
                            ( data.others as {slug: string, name: string, image: {mobile: string, tablet: string, desktop: string}}[]).map((product) => {
                                 return(
-                                    <li className={`${styles["recommendations__item"]}`}>
+                                    <li key={product.slug} className={`${styles["recommendations__item"]}`}>
                                         <picture className={`${styles["recommendations__picture"]}`}>
                                             <source  srcSet={`${URI}${product.image.mobile}`} media="(max-width: 767px)"/>
                                             <source  srcSet={`${URI}${product.image.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
