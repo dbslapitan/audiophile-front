@@ -4,6 +4,7 @@
 
 .product{
     padding-top: 1rem;
+    padding-bottom: 7.5rem;
 
     @include tablet{
         padding-top: 2rem;
@@ -11,6 +12,7 @@
 
     @include mid-tablet{
         padding-top: 5rem;
+        padding-bottom: 10rem
     }
 
     &__back{
@@ -292,5 +294,88 @@
     &__image{
         width: 100%;
         height: 100%;
+    }
+}
+
+.recommendations{
+    margin: 7.5rem auto 0;
+    width: 20.4375rem;
+    text-align: center;
+
+    @include tablet{
+        width: 43.0625rem;
+    }
+
+    @include mid-tablet{
+        width: 69.375rem;
+    }
+
+    &__title{
+        @include heading-05;
+        letter-spacing: 0.857px;
+    }
+
+    &__list{
+        margin-top: 2.5rem;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__item{
+        margin-top: 3.5rem;
+
+        @include tablet{
+            width: 13.935rem;
+            margin-top: 0;
+        }
+
+        @include mid-tablet{
+            width: 21.875rem;
+        }
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+    }
+
+    &__name{
+        @include heading-05;
+        margin-top: 2rem;
+        text-transform: uppercase;
+
+        @include tablet{
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__link{
+        @include body-03;
+        margin: 2rem auto 0;
+    }
+
+    &__picture{
+        height: 7.5rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        @include tablet{
+            height: 19.875rem;
+        }
+    }
+
+    &__image{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.thumbnail{
+    margin-top: 10.75rem;
+
+    @include mid-tablet{
+        margin-top: 15rem;
     }
 }

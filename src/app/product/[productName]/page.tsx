@@ -3,6 +3,8 @@ import styles from "./page.module.scss";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import AddToCart from "@/ui/add-to-cart/add-to-cart";
+import Hook from "@/ui/hook/hook";
+import ThumbnailNav from "@/ui/thumbnail-nav/thumbnail-nav";
 
 const URI = process.env.NEXT_PUBLIC_URI;
 
@@ -11,8 +13,6 @@ export default async function ProductPage({ params }: { params: Promise<{product
     try {
         const dynamicSegments = await params;
         const { data } = await axios.get(`${URI}/product/${dynamicSegments.productName}`);
-
-        console.log(data.gallery.first.mobile);
 
         return (
             <main className={`${styles["product"]}`}>
@@ -70,6 +70,31 @@ export default async function ProductPage({ params }: { params: Promise<{product
                         <img src={`${URI}${data.gallery.third.mobile}`} alt="first image of gallery" className={`${styles["gallery__image"]}`}/>
                     </picture>
                 </div>
+                <nav className={`${styles["recommendations"]}`}>
+                    <h2 className={`${styles["recommendations__title"]}`}>YOU MAY ALSO LIKE</h2>
+                    <ul className={`${styles["recommendations__list"]}`}>
+                        {
+                           ( data.others as {slug: string, name: string, image: {mobile: string, tablet: string, desktop: string}}[]).map((product) => {
+                                return(
+                                    <li className={`${styles["recommendations__item"]}`}>
+                                        <picture className={`${styles["recommendations__picture"]}`}>
+                                            <source  srcSet={`${URI}${product.image.mobile}`} media="(max-width: 767px)"/>
+                                            <source  srcSet={`${URI}${product.image.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
+                                            <source  srcSet={`${URI}${product.image.desktop}`} media="(min-width: 1234px)"/>
+                                            <img src={`${product.image.mobile}`} alt="" className={`${styles["recommendation__image"]}`} />
+                                        </picture>
+                                        <h3 className={`${styles["recommendations__name"]}`}>{product.name}</h3>
+                                        <Link href={`/product/${product.slug}`} className={`btn btn--peach ${styles["recommendations__link"]}`}>SEE PRODUCT</Link>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </nav>
+                <nav className={`${styles["thumbnail"]}`}>
+                    <ThumbnailNav />
+                </nav>
+                <Hook />
             </main>
         );
     }
