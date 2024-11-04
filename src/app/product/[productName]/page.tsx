@@ -12,6 +12,8 @@ export default async function ProductPage({ params }: { params: Promise<{product
         const dynamicSegments = await params;
         const { data } = await axios.get(`${URI}/product/${dynamicSegments.productName}`);
 
+        console.log(data.gallery.first.mobile);
+
         return (
             <main className={`${styles["product"]}`}>
                 <section className={`content ${styles["heading"]}`}>
@@ -48,6 +50,26 @@ export default async function ProductPage({ params }: { params: Promise<{product
                         </ul>
                     </div>
                 </section>
+                <div className={`${styles["gallery"]}`}>
+                    <picture className={`${styles["gallery__picture"]}`}>
+                        <source  srcSet={`${URI}${data.gallery.first.mobile}`} media="(max-width: 767px)"/>
+                        <source  srcSet={`${URI}${data.gallery.first.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
+                        <source  srcSet={`${URI}${data.gallery.first.desktop}`} media="(min-width: 1234px)"/>
+                        <img src={`${URI}${data.gallery.first.mobile}`} alt="first image of gallery" className={`${styles["gallery__image"]}`}/>
+                    </picture>
+                    <picture className={`${styles["gallery__picture"]}`}>
+                        <source  srcSet={`${URI}${data.gallery.second.mobile}`} media="(max-width: 767px)"/>
+                        <source  srcSet={`${URI}${data.gallery.second.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
+                        <source  srcSet={`${URI}${data.gallery.second.desktop}`} media="(min-width: 1234px)"/>
+                        <img src={`${URI}${data.gallery.second.mobile}`} alt="first image of gallery" className={`${styles["gallery__image"]}`}/>
+                    </picture>
+                    <picture className={`${styles["gallery__picture"]} ${styles["gallery__picture--third"]}`}>
+                        <source  srcSet={`${URI}${data.gallery.third.mobile}`} media="(max-width: 767px)"/>
+                        <source  srcSet={`${URI}${data.gallery.third.tablet}`} media="(min-width: 768px) and (max-width: 1233px)"/>
+                        <source  srcSet={`${URI}${data.gallery.third.desktop}`} media="(min-width: 1234px)"/>
+                        <img src={`${URI}${data.gallery.third.mobile}`} alt="first image of gallery" className={`${styles["gallery__image"]}`}/>
+                    </picture>
+                </div>
             </main>
         );
     }

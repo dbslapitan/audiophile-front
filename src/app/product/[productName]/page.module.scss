@@ -233,3 +233,64 @@
     }
 }
 
+.gallery{
+    width: 20.4375rem;
+    margin: 5.5rem auto 0;
+
+    @include tablet{
+        width: 43.0625rem;
+        display: flex;
+        flex-direction: column;
+        height: 23rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+        align-items: center;
+    }
+
+    @include mid-tablet{
+        width: 69.35rem;
+        height: 37rem;
+        justify-content: space-between;
+    }
+
+    &__picture{
+        overflow: hidden;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 10.875rem;
+        margin-top: 1.25rem;
+
+        @include tablet{
+            margin-top: 0;
+            width: 14.1875rem;
+        }
+
+        @include mid-tablet{
+            width: 27.8125rem;
+            height: 17.5rem;
+        }
+
+        &:first-of-type{
+            margin-top: 0;
+        }
+
+        &--third{
+            height: 23rem;
+
+            @include tablet{
+                width: 24.685rem;
+            }
+
+            @include mid-tablet{
+                height: 100%;
+                width: 39.6875rem;
+            }
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+}
