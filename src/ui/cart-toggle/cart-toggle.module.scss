@@ -1,0 +1,26 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+
+.cart{
+    &__overlay{
+        position: absolute;
+        width: 100vw;
+        height: calc(100vh - 5.625rem);
+        background-color: #00000066;
+        left: 0;
+        top: 100%;
+        display: none;
+    
+        &--show{
+            display: block;
+        }
+    }
+
+    &__toggle{
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

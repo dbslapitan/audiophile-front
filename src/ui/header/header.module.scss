@@ -27,13 +27,6 @@
             padding: 2.1875rem 0 2.3125rem;
         }
     }
-
-    &__cart{
-
-        @include mid-tablet{
-            order: 2;
-        }
-    }
 }
 
 .header{
