@@ -11,8 +11,7 @@ export default function CartToggle(){
 
     useEffect(() => {
 
-        const clickListener = (event: MouseEvent) => {
-            console.log("ran");
+        const clickListener = () => {
             if(cartOpen){
                 setCartOpen(false);
                 document.body.style.overflow = "auto";
