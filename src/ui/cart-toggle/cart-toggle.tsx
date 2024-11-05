@@ -52,7 +52,7 @@ export default function CartToggle(){
             </button>
             <div className={`${styles["cart__overlay"]} ${cartOpen ? styles["cart__overlay--show"] : ""}`}>
                 <section className={`${styles["cart__container"]}`} onClick={(event: ReactMouseEvent) => {event.stopPropagation()}}>
-
+                    <h3>CART</h3>
                 </section>
             </div>
         </div>
