@@ -29,7 +29,7 @@ export default async function ProductPage({ params }: { params: Promise<{product
                         <h1 className={`${styles["heading__name"]}`}>{data.name} <span className={`${styles["heading__category"]}`}>{data.category}</span></h1>
                         <p className={`${styles["heading__description"]}`}>{data.description}</p>
                         <h4 className={`${styles["heading__price"]}`}>${data.price}</h4>
-                        <AddToCart />
+                        <AddToCart product={{name: data.name, slug: data.slug, price: data.price}} />
                     </div>
                 </section>
                 <section className={`content ${styles["additional"]}`}>
