@@ -8,19 +8,22 @@ export default function AddToCart({ product }: { product: { name: string, price:
 
     const inputRef = useRef<HTMLInputElement | null>(null);
     const [cart, setCart] = useState<IItem[] | null>(null);
-    const [mounted, setMounted] = useState(false);
 
     const item = cart?.find(product => product.slug === product.slug) || { ...product, quantity: 1 };
 
     useEffect(() => {
-        if(!mounted){
-            const tempCart = localStorage.getItem("cart");
-            if (tempCart) {
-                setCart(JSON.parse(tempCart));
+        const lsCart = localStorage.getItem("cart");
+        if(!lsCart){
+            localStorage.setItem("cart", JSON.stringify([]));
+            setCart([]);
+        }
+        else{
+            if(JSON.stringify(cart) !== lsCart){
+                setCart(JSON.parse(lsCart));
             }
         }
-        setMounted(true);
-    }, [cart, mounted]);
+
+    }, [cart]);
 
     const addHandler = () => {
         item.quantity = item.quantity + 1;
