@@ -11,7 +11,7 @@ export default function Hook(){
                 <source srcSet={mobile.src} media="(max-width: 767px)"/>
                 <source srcSet={tablet.src} media="(min-width: 768px) and (max-width: 1233px)"/>
                 <source srcSet={desktop.src} media="(min-width: 1234px)"/>
-                <img src={mobile.src} alt="a person touching the headphone he is wearing" />
+                <img src={mobile.src} alt="" />
             </picture>
             <div className={`${styles["hook__last"]}`}>
                 <h4 className={`${styles["hook__heading"]}`}>Bringing you the <span  className={`${styles["hook__heading--peach"]}`}>&nbsp;best&nbsp;</span> audio gear</h4>

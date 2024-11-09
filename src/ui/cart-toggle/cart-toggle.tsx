@@ -9,7 +9,7 @@ import { IItem } from "@/models/item";
 export default function CartToggle() {
 
     const [cartOpen, setCartOpen] = useState(false);
-    const [items, setItems] = useState<IItem[] | null>(null);
+    const [items, setItems] = useState<IItem[]>([]);
 
     useEffect(() => {
 
@@ -54,6 +54,7 @@ export default function CartToggle() {
             <div className={`${styles["cart__overlay"]} ${cartOpen ? styles["cart__overlay--show"] : ""}`}>
                 <section className={`${styles["cart__container"]}`} onClick={(event: ReactMouseEvent) => { event.stopPropagation() }}>
                     <h3>CART ({items?.length || 0})</h3>
+
                 </section>
             </div>
         </div>

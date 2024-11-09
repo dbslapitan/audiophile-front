@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./add-to-cart.module.scss";
 import { IItem } from "@/models/item";
 
-export default function AddToCart({ product }: { product: { name: string, price: number, slug: string } }) {
+export default function AddToCart({ product }: { product: { name: string, price: number, slug: string, src: string } }) {
 
     const inputRef = useRef<HTMLInputElement | null>(null);
     const [cart, setCart] = useState<IItem[] | null>(null);

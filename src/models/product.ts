@@ -16,6 +16,7 @@ export interface Product2{
     "id": number,
     "slug": string,
     "name": string,
+    "checkout": string,
     "image": {
       "mobile": string,
       "tablet": string,
