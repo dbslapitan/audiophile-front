@@ -29,6 +29,11 @@ export default function CartToggle() {
         window.addEventListener("click", clickListener);
         window.addEventListener("keyup", escListener);
 
+        const cart = localStorage.getItem("cart") || [];
+        if(cart.length){
+                JSON.parse(cart.toString());
+            }
+
         return () => {
             window.removeEventListener("click", clickListener);
             window.removeEventListener("keyup", escListener);

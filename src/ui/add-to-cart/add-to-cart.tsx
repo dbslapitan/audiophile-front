@@ -7,22 +7,15 @@ import { IItem } from "@/models/item";
 export default function AddToCart({ product }: { product: { name: string, price: number, slug: string, src: string } }) {
 
     const inputRef = useRef<HTMLInputElement | null>(null);
-    const [cart, setCart] = useState<IItem[] | null>(null);
+    const [cart, setCart] = useState<IItem[]>([]);
 
     const item = cart?.find(product => product.slug === product.slug) || { ...product, quantity: 1 };
 
     useEffect(() => {
-        const lsCart = localStorage.getItem("cart");
-        if(!lsCart){
-            localStorage.setItem("cart", JSON.stringify([]));
-            setCart([]);
-        }
-        else{
-            if(JSON.stringify(cart) !== lsCart){
-                setCart(JSON.parse(lsCart));
-            }
-        }
+        const lsCart = localStorage.getItem("cart") || [];
+        if(JSON.stringify(cart) !== lsCart.toString()){
 
+        }
     }, [cart]);
 
     const addHandler = () => {
@@ -38,19 +31,14 @@ export default function AddToCart({ product }: { product: { name: string, price:
     }
 
     const addCartHandler = () => {
-        if(cart){
-            const index = cart.findIndex(x => x.slug === product.slug);
-            if(index === -1){
-                const temp = [...cart];
-                temp.push(item);
-            }
-            else{
-                cart[index] = item;
-            }
-            localStorage.setItem("cart", JSON.stringify(cart));
+        const index = cart.findIndex(product => product.slug === item.slug);
+        if(index === -1){
+            localStorage.setItem("cart", JSON.stringify([item]));
         }
         else{
-            localStorage.setItem("cart", JSON.stringify([item]));
+            const temp = [...cart];
+            temp[index] = item;
+            localStorage.setItem("cart", JSON.stringify(cart));
         }
     }
 

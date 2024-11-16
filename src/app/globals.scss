@@ -73,6 +73,10 @@ button{
     @include body_03;
     padding: 0.9375rem 2rem;
     color: $white-00;
+
+    &:hover{
+        cursor: pointer;
+    }
     
     &--peach{
         background-color: $peach-00;
