@@ -29,16 +29,17 @@ export default function CartToggle() {
         window.addEventListener("click", clickListener);
         window.addEventListener("keyup", escListener);
 
-        const cart = localStorage.getItem("cart") || [];
-        if(cart.length){
-                JSON.parse(cart.toString());
-            }
+        const lsCart = localStorage.getItem("cart") || "[]";
+
+        if(JSON.stringify(items) !== lsCart){
+            setItems(JSON.parse(lsCart));
+        }
 
         return () => {
             window.removeEventListener("click", clickListener);
             window.removeEventListener("keyup", escListener);
         }
-    }, [cartOpen, items]);
+    });
 
     const toggle = (event: ReactMouseEvent) => {
         event.stopPropagation();

@@ -9,7 +9,7 @@ export default function AddToCart({ product }: { product: { name: string, price:
     const inputRef = useRef<HTMLInputElement | null>(null);
     const [cart, setCart] = useState<IItem[]>([]);
 
-    const item = cart?.find(product => product.slug === product.slug) || { ...product, quantity: 1 };
+    const item = cart.find(item => item.slug === product.slug) || { ...product, quantity: 1 };
 
     useEffect(() => {
         const lsCart = localStorage.getItem("cart") || "[]";
@@ -31,14 +31,15 @@ export default function AddToCart({ product }: { product: { name: string, price:
     }
 
     const addCartHandler = () => {
-        const index = cart.findIndex(product => product.slug === item.slug);
+        const index = cart.findIndex(p => p.slug === item.slug);
+        console.log(index);
         if(index === -1){
-            localStorage.setItem("cart", JSON.stringify([item]));
+            localStorage.setItem("cart", JSON.stringify([...cart, item]));
         }
         else{
             const temp = [...cart];
             temp[index] = item;
-            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(temp));
         }
     }
 
