@@ -12,9 +12,9 @@ export default function AddToCart({ product }: { product: { name: string, price:
     const item = cart?.find(product => product.slug === product.slug) || { ...product, quantity: 1 };
 
     useEffect(() => {
-        const lsCart = localStorage.getItem("cart") || [];
-        if(JSON.stringify(cart) !== lsCart.toString()){
-
+        const lsCart = localStorage.getItem("cart") || "[]";
+        if(JSON.stringify(cart) !== lsCart){
+            setCart(JSON.parse(lsCart));
         }
     }, [cart]);
 
